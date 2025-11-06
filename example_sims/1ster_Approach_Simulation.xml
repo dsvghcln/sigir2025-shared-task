@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulationConfiguration id="sim_1ster_Approach">
+
+    <output 
+        baseDirectory="../example_sims/output/1ster_Approach/"
+        saveInteractionLog="true"
+        saveRelevanceJudgments="true"
+        trec_eval="false" />
+
+    <topics>
+        <!-- Nur die ersten 5 Topics als Beispiel -->
+        <topic id="1" filename="../example_data/CORE/topics_Task_A/topic.1" qrelsFilename="../example_data/CORE/core.qrels" />
+        <topic id="2" filename="../example_data/CORE/topics_Task_A/topic.2" qrelsFilename="../example_data/CORE/core.qrels" />
+        <topic id="3" filename="../example_data/CORE/topics_Task_A/topic.3" qrelsFilename="../example_data/CORE/core.qrels" />
+        <topic id="4" filename="../example_data/CORE/topics_Task_A/topic.4" qrelsFilename="../example_data/CORE/core.qrels" />
+        <topic id="5" filename="../example_data/CORE/topics_Task_A/topic.5" qrelsFilename="../example_data/CORE/core.qrels" />
+    </topics>
+
+    <users>
+        <user configurationFile="../example_sims/users/1ster_Approach_User.xml" />
+    </users>
+
+    <searchInterface class="PyTerrierSearchInterface">
+        <attribute name="index_or_dir" type="string" value="../example_data/index_CORE/" is_argument="true" />
+        <attribute name="wmodel" type="string" value="BM25" is_argument="true" />
+        <attribute name="memory" type="boolean" value="false" is_argument="true" />
+    </searchInterface>
+
+</simulationConfiguration>
