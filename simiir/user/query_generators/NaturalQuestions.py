@@ -44,3 +44,4 @@ class NaturalQuestionGenerator(BaseQueryGenerator):
         chosen_prefix: str = random.choice(prefixes)
         question_query: str = f"{chosen_prefix} {query.strip()}?"
         return question_query
+        
